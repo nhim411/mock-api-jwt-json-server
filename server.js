@@ -28,10 +28,10 @@ function verifyToken(token) {
 }
 
 // Check if the user exists in database
-function isAuthenticated({ email, password }) {
+function isAuthenticated({ email }) {
   return (
     userdb.users.findIndex(
-      (user) => user.email === email && user.password === password
+      (user) => user.email === email
     ) !== -1
   );
 }
